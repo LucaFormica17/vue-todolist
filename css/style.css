@@ -3,3 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header{
+    height: 75px;
+    background-color: rgb(8, 196, 8);
+}
+
+main{
+    background-color: green;
+    height: calc(100vh - 75px);
+    overflow-y: auto;
+}
+
+.header-img{
+    width: 200px;
+    margin-top: 10px;
+}
+
+.header-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.list-container{
+    background-color: white;
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+}
+
+li{
+    margin: 15px;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+
