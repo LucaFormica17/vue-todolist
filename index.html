@@ -31,7 +31,7 @@
                                 <ul class="list-unstyled">
                                     <li v-for="(todo, index) in toDoList" :key="index" :class="todo.done == true ? 'text-decoration-line-through text-secondary fst-italic' : ''">
                                         <div class="d-flex justify-content-between">
-                                            <span>{{todo.text}}</span>
+                                            <span @click="checkTask(index)">{{todo.text}}</span>
 
                                             <div class="buttons">
                                                 <button class="btn btn-sm btn-light" @click="checkTask(index)">
@@ -46,7 +46,7 @@
                                     </li>
                                 </ul>
                                 <div class="d-flex">
-                                    <input type="text" class="form-control" placeholder="inserisci nuova task" v-model="add_text">
+                                    <input type="text" class="form-control" placeholder="inserisci nuova task" v-model="add_text" @keyup.enter="addTask()">
                                     <button class="btn btn-sm btn-success" @click="addTask()">Aggiungi</button>
                                 </div>
                             </div>

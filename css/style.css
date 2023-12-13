@@ -39,6 +39,10 @@ li{
     border-bottom: 1px solid grey;
 }
 
+span{
+    cursor: pointer;
+}
+
 button{
     margin-left: 5px;
 }
