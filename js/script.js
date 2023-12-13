@@ -3,6 +3,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
+            add_text: '',
             toDoList: [
                 {
                     text: 'Wake up at the same time every morning',
@@ -84,6 +85,15 @@ createApp({
             if(checkDelete){
                 this.toDoList.splice(index,1);
             }
+        },
+        addTask(){
+            let obj = {
+                text: this.add_text,
+                done: false
+            }
+
+            this.toDoList.push(obj);
+            
         }
     }
 }).mount('#app')
