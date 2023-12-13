@@ -33,9 +33,15 @@
                                         <div class="d-flex justify-content-between">
                                             <span>{{todo.text}}</span>
 
-                                            <button class="btn btn-sm btn-light" @click="checkTask(index)">
-                                                <i class="fas fa-check fa-xl class="fa-solid fa-check fa-xl style="color: #00ff00;"></i>
-                                            </button>
+                                            <div class="buttons">
+                                                <button class="btn btn-sm btn-light" @click="checkTask(index)">
+                                                    <i class="fas fa-check fa-xl" style= "color: #00ff00;"></i>
+                                                </button>
+    
+                                                <button class="btn btn-sm btn-light">
+                                                    <i class="fas fa-xmark fa-xl" style="color: #ff0000;" @click="deleteTask(index)"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </li>
                                 </ul>

@@ -78,6 +78,12 @@ createApp({
     methods:{
         checkTask(index){
             this.toDoList[index].done = !this.toDoList[index].done;
+        },
+        deleteTask(index){
+            let checkDelete = confirm('Eliminare elemento selezionato?');
+            if(checkDelete){
+                this.toDoList.splice(index,1);
+            }
         }
     }
 }).mount('#app')
